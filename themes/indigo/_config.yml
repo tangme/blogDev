@@ -24,9 +24,6 @@ menu:
   weibo:
     url: https://github.com/tangme
     target: _blank
-  link:
-    text: 测试
-    url: /custom
 
 # 你的头像url
 avatar: /img/avatar.jpg
@@ -35,7 +32,7 @@ avatar_link: /
 # 头像背景图
 brand: /img/brand.jpg
 # favicon
-favicon: /favicon.ico
+favicon: /img/favicon.ico
 
 # email
 email: 526505973@qq.com
@@ -71,7 +68,7 @@ reward: false
 search: true
 
 # 是否大屏幕下文章页隐藏导航
-hideMenu: true
+hideMenu: false
 
 # 是否开启toc
 # toc: false

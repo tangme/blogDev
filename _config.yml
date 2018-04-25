@@ -4,16 +4,16 @@
 
 # Site
 title: 唐小律的发呆空间
-subtitle:
-description:
+subtitle: Just do it.
+description: something like.
 keywords:
-author: 唐律 
+author: 唐小律 
 language:
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://tangme.github.io/
 root: /blog
 permalink: :year/:month/:day/:title/
 permalink_defaults:
