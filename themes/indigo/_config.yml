@@ -21,8 +21,9 @@ menu:
   github:
     url: https://github.com/tangme
     target: _blank
-  weibo:
-    url: https://github.com/tangme
+  book:
+    text: 简书
+    url: https://www.jianshu.com/u/a4795910d1a1
     target: _blank
 
 # 你的头像url
