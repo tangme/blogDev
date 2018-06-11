@@ -153,3 +153,115 @@ computed: {
 可以看到，我们每次键入任何的信息，都会展示过滤后的内容。可见我们只须键入几行代码，而不须引用其它的类库，就能顺利的实现功能需求。
 
 我不会告诉你，这帮我省下了多少事件。如果你在使用Vue，而未[合理的使用计算属性](https://vuejs.org/v2/guide/computed.html#Computed-Properties) ，赶紧来试试，定让你开心的飞起来。
+
+# Watchers
+
+Vue 有着很好的抽象体系设计，不过基本上每个编程人员在使用抽象类时，都会有遇到绕不过的坎而不爽。但也正式基于此痛点，Vue 提供给我们在响应体系中更深度的操作能力，以便我们通过设置钩子来观察任何数据的改变。讲真，这实在太有用了，因为作为一个应用的开发者，大多数时候我们是对数据的变化而响应相关操作的。
+
+Watchers(侦听器) 允许我们编写更多声明式代码。以简化我们自己编写的代码量。Vue 已在底层实现了此功能，因此我们能在 `data`，`computed`	或 `props` 中跟踪任何数值的改变，来举个例。
+
+Watchers(侦听器) 在监测属性值改变时，执行特定的业务逻辑代码非常好用(我第一次是从 [Chris Fritz](https://twitter.com/chrisvfritz) 听到这种操作方式的，但是他说他也是从别处体验到的☺️)。多数情况下，通过检测属性的改变来执行业务逻辑，这也正是 与 计算属性不同的地方。
+
+现在来跑一个简单的例子，感受下 watch的效果
+
+```html
+<div id="app">
+    <input type="number" v-model.number="counter"></input>
+</div>
+```
+
+```javascript
+new Vue({
+  el: '#app', 
+  data() {
+    return {
+      counter: 0
+    }
+  },
+  watch: {
+    counter() {
+      console.log('The counter has changed!')
+    }
+  }
+})
+```
+
+如上面代码所示，我们在`data`中设置了`counter`，并将此属性名称作为方法名称，在`watch`中配置`counter`，以便我们能监测设置的`counter`属性值，最后我们可以看到，一旦`counter`数值发生改变，控制台都有输出。
+
+# Transitioning State With Watchers
+
+如果监测的状态标识符很简单，那么可以使用watch(侦听器)来实现一个根据状态值改变的过度效果。以下是一个使用Vue来完成的柱状图表。随着数值的变化，watch(侦听器)将通过过度效果来更新图表。
+
+SVG 如下面的例子一样很好使用，因为其以 数据 来构建。
+
+[点击查看DEMO](//codepen.io/sdras/embed/OWZRZL?height=578&theme-id=1&slug-hash=OWZRZL&default-tab=result&user=sdras&embed-version=2&pen-title=Chart%20made%20with%20Vue%2C%20Transitioning%20State )
+
+```javascript
+watch: {
+  selected: function(newValue, oldValue) {
+
+    var tweenedData = {}
+
+    var update = function () {
+      let obj = Object.values(tweenedData);
+      obj.pop();
+      this.targetVal = obj;
+    }
+
+    var tweenSourceData = { onUpdate: update, onUpdateScope: this }
+
+    for (let i = 0; i < oldValue.length; i++) {
+      let key = i.toString()
+      tweenedData[key] = oldValue[i]
+      tweenSourceData[key] = newValue[i]
+    }
+
+    TweenMax.to(tweenedData, 1, tweenSourceData)
+  }
+}
+```
+
+这里干了些啥呢？
+
+* 首先我们创建了一个对象，其会通过动画库来更新。
+* 然后这里可以看到一个`update`方法，
+* 接下来创建一个对象来接收
+* 接着创建一个for循环，将当前下编转换为字符串类型
+* 但我们只对指定的键值执行此操作
+
+我们也能在侦听器中使用动画来实现一个时差刻度盘。因为我时不时的会外出溜达，并且我的小伙伴也分散在不同的地方，所以需求之一就是能保证一个我们各自的当地时间都能在线，并且体现出是白天还是夜晚。
+
+[点击查看DEMO](//codepen.io/sdras/embed/RZGqxR?height=700&theme-id=1&slug-hash=RZGqxR&default-tab=result&user=sdras&embed-version=2&pen-title=Vue%20Time%20Comparison )
+
+这里我们监听 选中的属性值，根据当前时间去触发不同的方法来改变 各个区域时间，其会通过色调，饱和度，和其它过度效果来展现。在之前的实现方式中，我们是通过下拉事件，而现在是在侦听器的方法中了。
+
+```javascript
+watch: {
+  checked() {
+    let period = this.timeVal.slice(-2),
+      hr = this.timeVal.slice(0, this.timeVal.indexOf(':'));
+
+    const dayhr = 12,
+      rpos = 115,
+      rneg = -118;
+
+    if ((period === 'AM' && hr != 12) || (period === 'PM' && hr == 12)) {
+      this.spin(`${rneg - (rneg / dayhr) * hr}`)
+      this.animTime(1 - hr / dayhr, period)
+    } else {
+      this.spin(`${(rpos / dayhr) * hr}`)
+      this.animTime(hr / dayhr, period)
+    }
+
+  }
+},
+```
+
+关于watchers(侦听器)还有很多其它有趣的使用方式，比如：
+
+从输入，到异步更新，再到动画，watchers(侦听器)在更新方面能做的事实在是太多了。如果你对 Vue是如何处理响应工作感到好奇， [这部分指南](https://vuejs.org/v2/guide/reactivity.html)会十分有帮助。如果你想更加全面的了解 响应，我十分推荐  [Andre Staltz' post](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754)  和 Mike Bostock’s [A Better Way to Code](https://medium.com/@mbostock/a-better-way-to-code-2b1d2876a3a0)的响应章节部分。
+
+# 总结
+
+希望通过以上各部分的讲解，有助于我们正确的使用三者，以及更有效的使用Vue来加速开发我们的应用。有报告指出，我们花费70%的时间阅读代码，30%的时间编写代码，作为个人而言，身为维护者的我，喜欢这种感觉，通过查看代码库，开启了我之前从未了解过的编写方法，并且马上了解作者在`methods`，`computed`，`watchers`的区别用意。
+
