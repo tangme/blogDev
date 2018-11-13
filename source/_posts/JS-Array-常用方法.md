@@ -348,7 +348,7 @@ console.log(reArr);
 
 ```
 let testArr = [{age:11},{age:22},{age:33}];
-let reArr = testArr.find((item,i,arr)=>{
+let reArr = testArr.findIndex((item,i,arr)=>{
 	return item.age>15;
 });
 console.log(reArr);
