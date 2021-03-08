@@ -7,7 +7,7 @@ tags: [javascript]
 
 ## 静态方法
 
-### Array.isArray(obj);
+### Array.isArray(obj) ;
 
 > 检测给定值是否为数组； 是则返回 true | 否则返回 false
 
