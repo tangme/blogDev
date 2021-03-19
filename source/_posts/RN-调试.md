@@ -53,3 +53,10 @@ tags: [RN, react native]
 > adb shell input keyevent 82
 
 点击 **Toggle Inspector ** 唤起 _react-devtools_ 应用
+
+<div style="width: 100px; height: 100px;
+  border-radius: 50%;
+  padding: 10px;
+  border: 10px solid;
+  background-color: currentColor;
+  background-clip:content-box;"></div>

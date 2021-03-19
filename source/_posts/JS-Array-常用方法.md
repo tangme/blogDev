@@ -270,7 +270,7 @@ console.log(arr.join(''));
 * 注：处理后，如元素组中的元素 为String类型的数字，处理后为Number类型
 */
 function unwind(array){
-	return arr.join(',').split(',').map((item)=>{return Number(item)?Number(item):item});
+	return array.join(',').split(',').map((item)=>{return Number(item)?Number(item):item});
 }
 console.log(unwind(arr));
 /* [ -1, 'a', 'b', 'c', 'd', 'e', 123 ] */
