@@ -65,3 +65,7 @@ tags:
 #### 子项 flex-shrink 和值小于 1 的情景
 
 减小的宽度：`(` 溢出空间大小 `*` 各子项 shrink 和值 `)` `*` 子项自身 shrink `*` 子项自身宽度 `/` 总权重值（各子项宽度\*各子项 shrink 值之和）
+
+### flex
+
+**flex** 是 _flex-grow_ _flex-shrink_ _flex-basis_ 的简写
