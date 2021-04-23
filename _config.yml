@@ -79,7 +79,7 @@ theme: fluid
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/tangme/blog
+  repo: git@github.com:tangme/blog.git
   branch: master
 
 feed:
