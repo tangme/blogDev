@@ -1,6 +1,7 @@
 ---
 title: 如何使用WSL
 date: 2021-04-20 15:46:45
+index_img: https://z3.ax1x.com/2021/05/07/g1aOHS.jpg
 tags:
 ---
 
@@ -15,3 +16,6 @@ WSL(Windows Subsystem for Linux)，在 Windows 下提供 Linux 运行环境，�
 [WSL2 来了！但是能正常使用并不简单](https://zhuanlan.zhihu.com/p/144583887)
 
 [关于使用 WSL2 出现“参考的对象类型不支持尝试的操作”的解决方法](https://zhuanlan.zhihu.com/p/151392411)
+
+使用**VS Code**编辑现有的项目，有下面几种方式
+1、进入*WLS*下的项目目录，运行 `code .` 即可。
