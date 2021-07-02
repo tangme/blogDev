@@ -2,6 +2,7 @@
 title: nodejs 相关
 date: 2019-12-09 08:57:48
 index_img: https://s3.ax1x.com/2021/02/22/yHe27R.png
+cover: https://s3.ax1x.com/2021/02/22/yHe27R.png
 tags:
 ---
 

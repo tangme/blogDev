@@ -2,6 +2,7 @@
 title: 推荐安装Chrome扩展程序
 date: 2019-11-26 17:28:50
 index_img: https://s3.ax1x.com/2021/02/23/yb0PgO.jpg
+cover: https://s3.ax1x.com/2021/02/23/yb0PgO.jpg
 tags:
 ---
 

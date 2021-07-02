@@ -2,6 +2,7 @@
 title: Vue与Electron成长记
 date: 2019-11-28 16:33:10
 index_img: https://s3.ax1x.com/2021/03/10/6J0ayq.jpg
+cover: https://s3.ax1x.com/2021/03/10/6J0ayq.jpg
 tags:
 ---
 

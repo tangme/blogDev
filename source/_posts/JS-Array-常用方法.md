@@ -2,6 +2,7 @@
 title: JS-Array-常用方法
 date: 2018-04-27 10:57:08
 index_img: https://s3.ax1x.com/2021/03/08/6lY1dx.png
+cover: https://s3.ax1x.com/2021/03/08/6lY1dx.png
 tags: [javascript]
 ---
 

@@ -2,6 +2,7 @@
 title: VUE中的-methods-computed-watch
 date: 2018-06-04 09:53:10
 index_img: https://s3.ax1x.com/2021/02/23/ybdhY6.jpg
+cover: https://s3.ax1x.com/2021/02/23/ybdhY6.jpg
 tags:
   - vue
 

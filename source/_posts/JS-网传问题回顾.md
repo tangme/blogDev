@@ -2,6 +2,7 @@
 title: JS-网传问题回顾
 date: 2018-06-07 11:41:31
 index_img: https://s3.ax1x.com/2021/03/10/6JdNNQ.png
+cover: https://s3.ax1x.com/2021/03/10/6JdNNQ.png
 tags: [javascript]
 ---
 

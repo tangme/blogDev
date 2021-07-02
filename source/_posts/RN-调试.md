@@ -2,6 +2,7 @@
 title: RN-调试
 date: 2021-03-11 09:27:04
 index_img: https://s3.ax1x.com/2021/03/11/6Y6HRU.png
+cover: https://s3.ax1x.com/2021/03/11/6Y6HRU.png
 tags: [RN, react native]
 ---
 

@@ -2,6 +2,7 @@
 title: CSS-制作图形小知识
 date: 2021-03-19 11:37:48
 index_img: https://s4.ax1x.com/2021/03/19/6W4Vqx.jpg
+cover: https://s4.ax1x.com/2021/03/19/6W4Vqx.jpg
 tags:
 ---
 

@@ -2,6 +2,7 @@
 title: JS-Date-总结
 date: 2018-08-01 10:32:08
 index_img: https://s3.ax1x.com/2021/03/08/6lJ4PO.png
+cover: https://s3.ax1x.com/2021/03/08/6lJ4PO.png
 tags: [javascript]
 ---
 

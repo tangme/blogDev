@@ -6,6 +6,7 @@ tags:
   - 目录
 categories: 译文
 index_img: https://s3.ax1x.com/2021/03/10/6JBM9J.png
+cover: https://s3.ax1x.com/2021/03/10/6JBM9J.png
 ---
 
 # csslint 语法建议规则

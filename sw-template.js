@@ -3,7 +3,7 @@ const workboxVersion = "6.1.5";
 importScripts(`https://storage.googleapis.com/workbox-cdn/releases/${workboxVersion}/workbox-sw.js`);
 
 workbox.core.setCacheNameDetails({
-	prefix: "tanglv",
+	prefix: "T blog",
 });
 
 workbox.core.skipWaiting();

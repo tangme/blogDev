@@ -1,6 +1,6 @@
 {
-	"name": "tanglv",
-	"short_name": "tanglv",
+	"name": "T Blog",
+	"short_name": "T Blog",
 	"icons": [
 		{
 			"src": "/blog/pwa/android-chrome-36x36.png",
@@ -30,18 +30,29 @@
 		{
 			"src": "/blog/pwa/android-chrome-192x192.png",
 			"sizes": "192x192",
-			"type": "image/png"
+			"type": "image/png",
+			"purpose": "any maskable"
 		},
 		{
 			"src": "/blog/pwa/android-chrome-256x256.png",
 			"sizes": "256x256",
 			"type": "image/png"
+		},
+		{
+			"src": "/blog/pwa/android-chrome-384x384.png",
+			"sizes": "384x384",
+			"type": "image/png"
+		},
+		{
+			"src": "/blog/pwa/android-chrome-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
 		}
 	],
-	"theme_color": "#ffffff",
-	"background_color": "#ffffff",
-	"display": "standalone",
+	"theme_color": "#000000",
+	"background_color": "#000000",
+	"display": "fullscreen",
 	"splash_pages": null,
-	"scope": "/blog",
-	"start_url": "/blog"
+	"scope": "/blog/",
+	"start_url": "/blog/"
 }

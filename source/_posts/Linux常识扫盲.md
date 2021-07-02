@@ -1,6 +1,7 @@
 ---
 title: Linux常识扫盲
 date: 2021-05-08 10:42:44
+cover: https://z3.ax1x.com/2021/07/02/R6i1U0.jpg
 tags:
 ---
 
