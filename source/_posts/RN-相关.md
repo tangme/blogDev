@@ -1,5 +1,5 @@
 ---
-title: RN-调试
+title: RN-相关
 date: 2021-03-11 09:27:04
 index_img: https://s3.ax1x.com/2021/03/11/6Y6HRU.png
 cover: https://s3.ax1x.com/2021/03/11/6Y6HRU.png
@@ -8,7 +8,12 @@ tags: [RN, react native]
 
 # 安卓(Android)
 
-## adb 相关命令
+## gradle
+
+前端思维理解就是 npm + gulp/grunt
+gradle 可以用来安装第三方包，并且将项目打包
+
+## adb (Android Debug Bridge) 相关命令
 
 ### adb devices
 
@@ -55,9 +60,43 @@ tags: [RN, react native]
 
 点击 **Toggle Inspector ** 唤起 _react-devtools_ 应用
 
-<div style="width: 100px; height: 100px;
-  border-radius: 50%;
-  padding: 10px;
-  border: 10px solid;
-  background-color: currentColor;
-  background-clip:content-box;"></div>
+# 项目配置
+
+## [设置路径别称 (alias)](https://mtateam.medium.com/how-to-use-import-aliases-with-react-native-and-vs-code-dadb246674c7)
+
+> npm i -D metro-react-native-babel-preset
+
+> npm i -D babel-plugin-module-resolver
+
+```
+//在babel.config.js中设置
+
+module.exports = {
+  presets: ['module:metro-react-native-babel-preset'],
+  plugins: [
+    [
+      'module-resolver',
+      {
+        root: ['./src'],
+        extensions: [
+          '.ios.ts',
+          '.android.ts',
+          '.ts',
+          '.ios.tsx',
+          '.android.tsx',
+          '.tsx',
+          '.jsx',
+          '.js',
+          '.json',
+        ],
+        alias: {
+          //'@navigation': './src/navigation',
+          //'@components': './src/components',
+          //'@assets': './assets',
+          '@': './src/',
+        },
+      },
+    ],
+  ],
+};
+```

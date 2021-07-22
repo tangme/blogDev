@@ -24,7 +24,7 @@ tags:
 
 ## 调试
 
-> node --inspect-brk
+> node --inspect-brk [filename]
 
 立即进入 debugger 模式，chrome 地址栏 chrome://inspect 进入 debugger 页面
 
