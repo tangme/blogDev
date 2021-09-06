@@ -100,3 +100,26 @@ module.exports = {
   ],
 };
 ```
+
+修改项目根目录下的 **jsconfig.json** 与 **tsconfig.json** 文件
+
+```
+/*在 compilerOptions 节点下新增如下内容*/
+
+"baseUrl": "./",
+"paths": {
+  "@/*": [
+    "src/*"
+  ],
+},
+```
+
+在 vscode 中安装 **Path Intellisense** 插件
+之后设置**Path Intellisense**的配置
+
+```
+"path-intellisense.mappings": {
+        "@": "${workspaceRoot}/src"
+    },
+"path-intellisense.extensionOnImport": true
+```
