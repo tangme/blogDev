@@ -1,6 +1,7 @@
 ---
 title: VSCode 笔记
 date: 2021-08-26 15:13:17
+cover: https://z3.ax1x.com/2021/09/06/h4w9PS.jpg
 tags:
 ---
 

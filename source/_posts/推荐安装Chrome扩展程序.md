@@ -1,5 +1,5 @@
 ---
-title: 推荐安装Chrome扩展程序
+title: 推荐安装 Chrome 扩展程序
 date: 2019-11-26 17:28:50
 index_img: https://s3.ax1x.com/2021/02/23/yb0PgO.jpg
 cover: https://s3.ax1x.com/2021/02/23/yb0PgO.jpg
@@ -38,19 +38,11 @@ tags:
 
 ---
 
-# [AdBlock 广告拦截工具](https://chrome.google.com/webstore/detail/adblock-%E2%80%94-best-ad-blocker/gighmmpiobklfepjocnamgkkbiglidom)
+# [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
 
-> 在 YouTube、Facebook、Twitch 和其他你喜爱的网站上拦截广告和弹窗。
+> 广告拦截，不同于其它的竞品，uBlock Origin 是检测到广告后直接不请求，不渲染，而不是动态隐藏
 
 {% asset_img adblock.jpg AdBlock 广告拦截工具 %}
-
----
-
-# [广告终结者](https://chrome.google.com/webstore/detail/%E5%B9%BF%E5%91%8A%E7%BB%88%E7%BB%93%E8%80%85/fpdnjdlbdmifoocedhkighhlbchbiikl)
-
-> 清除网页上的所有广告：浮动广告，购物广告，恶意弹窗，跟踪代码。
-
-{% asset_img adkiller.jpg 广告终结者 %}
 
 ---
 
@@ -78,10 +70,14 @@ tags:
 
 ---
 
-# [ColorZilla](https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp)
+# [OctoLinker](https://chrome.google.com/webstore/detail/octolinker/jlmafbaeoofdegohdhinkhilhclaklkp)
 
-> 网页拾色工具。
+> 在 github 项目源码里点击链接，可以直接访问对应的文件
 
-{% asset_img colorzilla.jpg ColorZilla %}
+# [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb)
 
----
+> 像 vim 一样，仅使用键盘来游览操作网页
+
+# [Privacy Badger](https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp)
+
+> 保护隐私，防止追踪
