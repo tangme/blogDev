@@ -1,6 +1,7 @@
 ---
 title: nginx
 date: 2021-10-27 16:21:32
+cover: https://z3.ax1x.com/2021/11/29/oKvMTO.jpg
 tags:
 ---
 
